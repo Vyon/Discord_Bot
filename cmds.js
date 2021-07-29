@@ -131,6 +131,7 @@ module.exports = {
 	kick: {
 		command: 'kick', // Command Name/Names
 		minArgs: 2, // The minimum amount of arguments you need
+		expectedArgs: '<target> <reason>',
 		requiredRoles: ['Staff'], // The role needed to use this command
 		callback: (msg, args, __, bot, timeArr) => { // callback function
 			const { guild, author } = msg // Gets the guild and author
@@ -168,6 +169,7 @@ module.exports = {
 	ban: {
 		command: 'ban', // Command Name/Names
 		minArgs: 2, // The minimum amount of arguments you need
+		expectedArgs: '<target> <reason>',
 		requiredRoles: ['Staff'], // The role needed to use this command
 		callback: (msg, args, __1, bot, timeArr) => { // callback function
 			const { guild, author } = msg // Gets the guild and author
@@ -208,6 +210,7 @@ module.exports = {
 	unban: {
 		command: 'unban', // Command Name/Names
 		minArgs: 2, // The minimum amount of arguments you need
+		expectedArgs: '<target> <reason>',
 		requiredRoles: ['Staff'], // The role needed to use this command
 		callback: async(msg,  args, __1, __2, timeArr) => { // async functions allow async specific things to be used such as await
 			const { guild, author } = msg // Gets the guild and author
